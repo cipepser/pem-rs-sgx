@@ -14,8 +14,7 @@ edition = "2018"
 [dependencies]
 base64 = { git = "https://github.com/mesalock-linux/rust-base64-sgx" }
 once_cell = { git = "https://github.com/mesalock-linux/once_cell-sgx" }
-#regex = { git = "https://github.com/mesalock-linux/regex-sgx" }
-regex = { git = "https://github.com/cipepser/regex-sgx", branch = "feature/no-perf-cache", default-features = false, features = ["std", "unicode", "mesalock_sgx", "perf-dfa", "perf-inline", "perf-literal"] }
+regex = { git = "https://github.com/mesalock-linux/regex-sgx", default-features = false, features = ["std", "unicode", "mesalock_sgx", "perf-dfa", "perf-inline", "perf-literal"] }
 sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
 
 [dev-dependencies]
